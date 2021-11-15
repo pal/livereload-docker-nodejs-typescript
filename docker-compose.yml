@@ -1,18 +1,17 @@
-version: '2.1'
+version: '3.8'
 
 services:
-  docker-js-livereload:
-    image: docker-js-livereload
+  mysql-ts-api:
+    image: mysql-ts-api
     build: .
     environment: 
       FRONT_PORT: 8080
       BACK_PORT: 3000
     volumes:
-      - .:/src
-      - nodemodules:/src/node_modules
+      - .:/run
+      - nodemodules:/run/node_modules
     ports:
       - 3000:3000
       - 8080:8080
 volumes:
   nodemodules: {}
-    

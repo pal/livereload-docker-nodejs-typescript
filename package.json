@@ -1,12 +1,12 @@
 {
-  "name": "docker-js-livereload",
+  "name": "mysql-ts-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "npx typescript",
     "build:watch": "npx typescript -w",
-    "dev:front": "npx http-server -p $FRONT_PORT .",
+    "dev:front": "npx http-server -p $FRONT_PORT ./src/",
     "live-reload": "npm run build && npx concurrently \"npm run build:watch\"  \"npm run dev:back\" \"npm run dev:front\" ",
     "dev:back": "npx nodemon bin/Index.js"
   },
@@ -14,14 +14,13 @@
   "author": "erickwendel",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "13.7.7",
-    "@types/socket.io": "2.1.4",
-    "concurrently": "5.1.0",
-    "nodemon": "2.0.2",
-    "typescript": "3.8.3",
-    "http-server": "0.12.1"
+    "@types/node": "^16.11.7",
+    "concurrently": "6.4.0",
+    "http-server": "14.0.0",
+    "nodemon": "2.0.15",
+    "typescript": "4.4.4"
   },
   "dependencies": {
-    "socket.io": "^2.3.0"
+    "socket.io": "^4.3.2"
   }
 }

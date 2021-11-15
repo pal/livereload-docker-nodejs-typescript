@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
     <script>
       var socket = io("http://localhost:3000");
       socket.on("connect", function() {
@@ -24,7 +24,7 @@
     </script>
   </head>
   <body>
-    <h2>Docker live reload with Node.js</h2>
+    <h2>Some cool live reload with Node.js is cool</h2>
     <output id="logger"></output>
     <br />
     <img width="300" height="300" id="imagem" src="./resources/sad.jpg" alt="sad picture" />

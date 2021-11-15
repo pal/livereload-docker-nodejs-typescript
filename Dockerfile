@@ -1,18 +1,18 @@
-FROM node:12-alpine as build
+FROM node:14-alpine as build
 
-WORKDIR /src/
+WORKDIR /run/
 
-COPY package.json package-lock.json /src/
+COPY package.json package-lock.json /run/
 
 RUN  npm ci --silent
 
 COPY . .
 
-FROM node:12-alpine as dev
+FROM node:14-alpine as dev
 
-WORKDIR /src/
+WORKDIR /run/
 
-COPY --from=build /src/node_modules node_modules
+COPY --from=build /run/node_modules node_modules
 
 USER node
 
